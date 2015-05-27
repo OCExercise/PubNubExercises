@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C7F7F8CD5CC3DF14F4CBB56 /* libPods-libcommonmsg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B88D6EF058E7E086093795F6 /* libPods-libcommonmsg.a */; };
+		1D9E19A31B163B6B0041B114 /* CommonMessaging.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1D9E19A21B163B6B0041B114 /* CommonMessaging.podspec */; };
+		1D9E19AF1B1642C80041B114 /* MessengerChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E19AD1B1642C80041B114 /* MessengerChannel.m */; };
+		1D9E19B01B1642D10041B114 /* MessengerChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9E19AD1B1642C80041B114 /* MessengerChannel.m */; };
+		1D9E19C71B1688330041B114 /* CommonMessagingImports.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9E199D1B163A1C0041B114 /* CommonMessagingImports.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D9E19C81B1688490041B114 /* CommonMessagingImports.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D9E199D1B163A1C0041B114 /* CommonMessagingImports.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DC6F83A1B16357000352EE2 /* CommonMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC6F82E1B16357000352EE2 /* CommonMessaging.framework */; };
+		1DC6F8411B16357000352EE2 /* CommonMessagingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC6F8401B16357000352EE2 /* CommonMessagingTests.m */; };
+		B18D39191A5F4A28E6E57761 /* libPods-common_messaging_framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4ADC73AD04E068BFCB6A0 /* libPods-common_messaging_framework.a */; };
+		EF44CBF0BC194C9507E4221B /* libPods-common_messaging_framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4ADC73AD04E068BFCB6A0 /* libPods-common_messaging_framework.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DC6F83B1B16357000352EE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DC6F8251B16357000352EE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DC6F82D1B16357000352EE2;
+			remoteInfo = CommonMessaging;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1DC6F84C1B1635A500352EE2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		077880C2D7E9706AE90BE3C9 /* Pods-common_messaging_framework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common_messaging_framework.release.xcconfig"; path = "../../../../../Pods/Target Support Files/Pods-common_messaging_framework/Pods-common_messaging_framework.release.xcconfig"; sourceTree = "<group>"; };
+		1D9E199D1B163A1C0041B114 /* CommonMessagingImports.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMessagingImports.h; sourceTree = "<group>"; };
+		1D9E19A21B163B6B0041B114 /* CommonMessaging.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CommonMessaging.podspec; sourceTree = "<group>"; };
+		1D9E19AC1B1642C80041B114 /* MessengerChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessengerChannel.h; sourceTree = "<group>"; };
+		1D9E19AD1B1642C80041B114 /* MessengerChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessengerChannel.m; sourceTree = "<group>"; };
+		1D9E19B21B165B860041B114 /* MessengerChannelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessengerChannelDelegate.h; sourceTree = "<group>"; };
+		1D9E19C41B1685C80041B114 /* CommonMessaging-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommonMessaging-Prefix.pch"; sourceTree = "<group>"; };
+		1D9E19C91B1688E40041B114 /* MessengerGlobals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessengerGlobals.h; sourceTree = "<group>"; };
+		1DC6F82E1B16357000352EE2 /* CommonMessaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonMessaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC6F8321B16357000352EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DC6F8391B16357000352EE2 /* CommonMessagingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonMessagingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC6F83F1B16357000352EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DC6F8401B16357000352EE2 /* CommonMessagingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonMessagingTests.m; sourceTree = "<group>"; };
+		1DC6F84E1B1635A500352EE2 /* liblibcommonmsg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibcommonmsg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E00E28F84CE9FFFCC8E810A /* Pods-libcommonmsg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcommonmsg.debug.xcconfig"; path = "../../../../../Pods/Target Support Files/Pods-libcommonmsg/Pods-libcommonmsg.debug.xcconfig"; sourceTree = "<group>"; };
+		20678FA759376D8BAAACC4BC /* Pods-common_messaging_framework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common_messaging_framework.debug.xcconfig"; path = "../../../../../Pods/Target Support Files/Pods-common_messaging_framework/Pods-common_messaging_framework.debug.xcconfig"; sourceTree = "<group>"; };
+		2DD4ADC73AD04E068BFCB6A0 /* libPods-common_messaging_framework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-common_messaging_framework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B88D6EF058E7E086093795F6 /* libPods-libcommonmsg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-libcommonmsg.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE9AF380771D51C3EAA9ED74 /* Pods-libcommonmsg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libcommonmsg.release.xcconfig"; path = "../../../../../Pods/Target Support Files/Pods-libcommonmsg/Pods-libcommonmsg.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DC6F82A1B16357000352EE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18D39191A5F4A28E6E57761 /* libPods-common_messaging_framework.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC6F8361B16357000352EE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC6F83A1B16357000352EE2 /* CommonMessaging.framework in Frameworks */,
+				EF44CBF0BC194C9507E4221B /* libPods-common_messaging_framework.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC6F84B1B1635A500352EE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C7F7F8CD5CC3DF14F4CBB56 /* libPods-libcommonmsg.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D9E19981B1639F10041B114 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				1D9E19AA1B16429D0041B114 /* Connectivity */,
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+		1D9E199E1B163A3E0041B114 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				1D9E199D1B163A1C0041B114 /* CommonMessagingImports.h */,
+				1D9E19C91B1688E40041B114 /* MessengerGlobals.h */,
+			);
+			name = Public;
+			sourceTree = "<group>";
+		};
+		1D9E19AA1B16429D0041B114 /* Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				1D9E19AB1B1642A60041B114 /* PubNub */,
+			);
+			name = Connectivity;
+			sourceTree = "<group>";
+		};
+		1D9E19AB1B1642A60041B114 /* PubNub */ = {
+			isa = PBXGroup;
+			children = (
+				1D9E19B11B165B6D0041B114 /* Protocols & Delegates */,
+				1D9E19AC1B1642C80041B114 /* MessengerChannel.h */,
+				1D9E19AD1B1642C80041B114 /* MessengerChannel.m */,
+			);
+			name = PubNub;
+			sourceTree = "<group>";
+		};
+		1D9E19B11B165B6D0041B114 /* Protocols & Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				1D9E19B21B165B860041B114 /* MessengerChannelDelegate.h */,
+			);
+			name = "Protocols & Delegates";
+			sourceTree = "<group>";
+		};
+		1DC6F8241B16357000352EE2 = {
+			isa = PBXGroup;
+			children = (
+				1D9E19A21B163B6B0041B114 /* CommonMessaging.podspec */,
+				1DC6F8301B16357000352EE2 /* CommonMessaging */,
+				1DC6F83D1B16357000352EE2 /* CommonMessagingTests */,
+				1DC6F82F1B16357000352EE2 /* Products */,
+				48EFC7E7804E77EAAF86B1A9 /* Pods */,
+				62E2C1CB2FCFB56D9039900F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1DC6F82F1B16357000352EE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DC6F82E1B16357000352EE2 /* CommonMessaging.framework */,
+				1DC6F8391B16357000352EE2 /* CommonMessagingTests.xctest */,
+				1DC6F84E1B1635A500352EE2 /* liblibcommonmsg.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DC6F8301B16357000352EE2 /* CommonMessaging */ = {
+			isa = PBXGroup;
+			children = (
+				1D9E199E1B163A3E0041B114 /* Public */,
+				1D9E19981B1639F10041B114 /* Engine */,
+				1DC6F8311B16357000352EE2 /* Supporting Files */,
+			);
+			path = CommonMessaging;
+			sourceTree = "<group>";
+		};
+		1DC6F8311B16357000352EE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DC6F8321B16357000352EE2 /* Info.plist */,
+				1D9E19C41B1685C80041B114 /* CommonMessaging-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1DC6F83D1B16357000352EE2 /* CommonMessagingTests */ = {
+			isa = PBXGroup;
+			children = (
+				1DC6F8401B16357000352EE2 /* CommonMessagingTests.m */,
+				1DC6F83E1B16357000352EE2 /* Supporting Files */,
+			);
+			path = CommonMessagingTests;
+			sourceTree = "<group>";
+		};
+		1DC6F83E1B16357000352EE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DC6F83F1B16357000352EE2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48EFC7E7804E77EAAF86B1A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20678FA759376D8BAAACC4BC /* Pods-common_messaging_framework.debug.xcconfig */,
+				077880C2D7E9706AE90BE3C9 /* Pods-common_messaging_framework.release.xcconfig */,
+				1E00E28F84CE9FFFCC8E810A /* Pods-libcommonmsg.debug.xcconfig */,
+				BE9AF380771D51C3EAA9ED74 /* Pods-libcommonmsg.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		62E2C1CB2FCFB56D9039900F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4ADC73AD04E068BFCB6A0 /* libPods-common_messaging_framework.a */,
+				B88D6EF058E7E086093795F6 /* libPods-libcommonmsg.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1DC6F82B1B16357000352EE2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9E19C71B1688330041B114 /* CommonMessagingImports.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC6F8651B16364E00352EE2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9E19C81B1688490041B114 /* CommonMessagingImports.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1DC6F82D1B16357000352EE2 /* CommonMessaging */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC6F8441B16357000352EE2 /* Build configuration list for PBXNativeTarget "CommonMessaging" */;
+			buildPhases = (
+				A0200013797C5017F8798DAA /* Check Pods Manifest.lock */,
+				1DC6F8291B16357000352EE2 /* Sources */,
+				1DC6F82A1B16357000352EE2 /* Frameworks */,
+				1DC6F82B1B16357000352EE2 /* Headers */,
+				1DC6F82C1B16357000352EE2 /* Resources */,
+				E11EBEAD0293A0F4E04D86B9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommonMessaging;
+			productName = CommonMessaging;
+			productReference = 1DC6F82E1B16357000352EE2 /* CommonMessaging.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1DC6F8381B16357000352EE2 /* CommonMessagingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC6F8471B16357000352EE2 /* Build configuration list for PBXNativeTarget "CommonMessagingTests" */;
+			buildPhases = (
+				99E6BF1F063A56CE5ACA2F43 /* Check Pods Manifest.lock */,
+				1DC6F8351B16357000352EE2 /* Sources */,
+				1DC6F8361B16357000352EE2 /* Frameworks */,
+				1DC6F8371B16357000352EE2 /* Resources */,
+				ED7E594E232950F193F96632 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DC6F83C1B16357000352EE2 /* PBXTargetDependency */,
+			);
+			name = CommonMessagingTests;
+			productName = CommonMessagingTests;
+			productReference = 1DC6F8391B16357000352EE2 /* CommonMessagingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1DC6F84D1B1635A500352EE2 /* libcommonmsg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC6F85F1B1635A500352EE2 /* Build configuration list for PBXNativeTarget "libcommonmsg" */;
+			buildPhases = (
+				7F145E59BA5FBD4A53D61B72 /* Check Pods Manifest.lock */,
+				1DC6F84A1B1635A500352EE2 /* Sources */,
+				1DC6F84B1B1635A500352EE2 /* Frameworks */,
+				1DC6F8651B16364E00352EE2 /* Headers */,
+				1DC6F84C1B1635A500352EE2 /* CopyFiles */,
+				5DEA70EDC8E28510D9BDB557 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libcommonmsg;
+			productName = libcommonmsg;
+			productReference = 1DC6F84E1B1635A500352EE2 /* liblibcommonmsg.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DC6F8251B16357000352EE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Universal Secure Registry, LLC";
+				TargetAttributes = {
+					1DC6F82D1B16357000352EE2 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					1DC6F8381B16357000352EE2 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					1DC6F84D1B1635A500352EE2 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 1DC6F8281B16357000352EE2 /* Build configuration list for PBXProject "CommonMessaging" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1DC6F8241B16357000352EE2;
+			productRefGroup = 1DC6F82F1B16357000352EE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DC6F82D1B16357000352EE2 /* CommonMessaging */,
+				1DC6F8381B16357000352EE2 /* CommonMessagingTests */,
+				1DC6F84D1B1635A500352EE2 /* libcommonmsg */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DC6F82C1B16357000352EE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9E19A31B163B6B0041B114 /* CommonMessaging.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC6F8371B16357000352EE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DEA70EDC8E28510D9BDB557 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../../../../../Pods/Target Support Files/Pods-libcommonmsg/Pods-libcommonmsg-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F145E59BA5FBD4A53D61B72 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		99E6BF1F063A56CE5ACA2F43 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A0200013797C5017F8798DAA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E11EBEAD0293A0F4E04D86B9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../../../../../Pods/Target Support Files/Pods-common_messaging_framework/Pods-common_messaging_framework-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED7E594E232950F193F96632 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../../../../../Pods/Target Support Files/Pods-common_messaging_framework/Pods-common_messaging_framework-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DC6F8291B16357000352EE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9E19AF1B1642C80041B114 /* MessengerChannel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC6F8351B16357000352EE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC6F8411B16357000352EE2 /* CommonMessagingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC6F84A1B1635A500352EE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9E19B01B1642D10041B114 /* MessengerChannel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DC6F83C1B16357000352EE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DC6F82D1B16357000352EE2 /* CommonMessaging */;
+			targetProxy = 1DC6F83B1B16357000352EE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DC6F8421B16357000352EE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1DC6F8431B16357000352EE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1DC6F8451B16357000352EE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20678FA759376D8BAAACC4BC /* Pods-common_messaging_framework.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CommonMessaging/CommonMessaging-Prefix.pch";
+				INFOPLIST_FILE = CommonMessaging/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1DC6F8461B16357000352EE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 077880C2D7E9706AE90BE3C9 /* Pods-common_messaging_framework.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CommonMessaging/CommonMessaging-Prefix.pch";
+				INFOPLIST_FILE = CommonMessaging/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1DC6F8481B16357000352EE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20678FA759376D8BAAACC4BC /* Pods-common_messaging_framework.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CommonMessagingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1DC6F8491B16357000352EE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 077880C2D7E9706AE90BE3C9 /* Pods-common_messaging_framework.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CommonMessagingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1DC6F8601B1635A500352EE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E00E28F84CE9FFFCC8E810A /* Pods-libcommonmsg.debug.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CommonMessaging/CommonMessaging-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1DC6F8611B1635A500352EE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE9AF380771D51C3EAA9ED74 /* Pods-libcommonmsg.release.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CommonMessaging/CommonMessaging-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DC6F8281B16357000352EE2 /* Build configuration list for PBXProject "CommonMessaging" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC6F8421B16357000352EE2 /* Debug */,
+				1DC6F8431B16357000352EE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC6F8441B16357000352EE2 /* Build configuration list for PBXNativeTarget "CommonMessaging" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC6F8451B16357000352EE2 /* Debug */,
+				1DC6F8461B16357000352EE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC6F8471B16357000352EE2 /* Build configuration list for PBXNativeTarget "CommonMessagingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC6F8481B16357000352EE2 /* Debug */,
+				1DC6F8491B16357000352EE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC6F85F1B1635A500352EE2 /* Build configuration list for PBXNativeTarget "libcommonmsg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC6F8601B1635A500352EE2 /* Debug */,
+				1DC6F8611B1635A500352EE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DC6F8251B16357000352EE2 /* Project object */;
+}

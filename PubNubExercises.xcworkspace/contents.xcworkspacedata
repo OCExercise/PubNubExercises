@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:src/main/objc/common/messaging/CommonMessaging.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:src/main/objc/osx/messenger/MessengerOSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:src/main/objc/ios/messenger/MessengerMobile.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:src/main/objc/osx/hello/HelloOSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:src/main/objc/ios/hello/HelloMobile.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

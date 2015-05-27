@@ -1,0 +1,18 @@
+PODS:
+  - CommonMessaging (1.0):
+    - PubNub (~> 3.7.10.8)
+  - PubNub (3.7.10.8)
+
+DEPENDENCIES:
+  - CommonMessaging (from `src/main/objc/common/messaging`)
+  - PubNub (~> 3.7.10.8)
+
+EXTERNAL SOURCES:
+  CommonMessaging:
+    :path: src/main/objc/common/messaging
+
+SPEC CHECKSUMS:
+  CommonMessaging: 2822fdefbba9e20a18356789e85165ecf38aa6d6
+  PubNub: 055424dfc6aaa404f7bdf1297c886a1a009511de
+
+COCOAPODS: 0.37.1

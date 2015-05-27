@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7WX-QF-fAP" userLabel="Output View">
+                                <rect key="frame" x="0.0" y="281" width="600" height="299"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ah6-CE-d0a">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="299"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.098039215690000001" green="0.74034583679999999" blue="0.92407948979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kg-mt-Z6u" userLabel="Control View">
+                                <rect key="frame" x="0.0" y="20" width="600" height="253"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7l7-l7-P9w" userLabel="Send Message">
+                                        <rect key="frame" x="232" y="112" width="137" height="30"/>
+                                        <color key="backgroundColor" red="0.039215686270000001" green="0.43137254899999999" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="137" id="F3q-F6-Alh"/>
+                                        </constraints>
+                                        <state key="normal" title="Send Message">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="7l7-l7-P9w" firstAttribute="centerX" secondItem="3kg-mt-Z6u" secondAttribute="centerX" id="7tK-OG-q31"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="7l7-l7-P9w" secondAttribute="trailing" constant="73" id="DeY-Pt-dbh"/>
+                                    <constraint firstItem="7l7-l7-P9w" firstAttribute="leading" secondItem="3kg-mt-Z6u" secondAttribute="leadingMargin" constant="74" id="JnS-w3-IWG"/>
+                                    <constraint firstItem="7l7-l7-P9w" firstAttribute="top" secondItem="3kg-mt-Z6u" secondAttribute="top" constant="112" id="Kcx-8N-3Me"/>
+                                    <constraint firstItem="7l7-l7-P9w" firstAttribute="centerX" secondItem="3kg-mt-Z6u" secondAttribute="centerX" id="LBq-8h-15X"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="7l7-l7-P9w" secondAttribute="bottom" constant="103" id="UAU-08-KZ9"/>
+                                    <constraint firstItem="7l7-l7-P9w" firstAttribute="top" secondItem="3kg-mt-Z6u" secondAttribute="top" constant="112" id="VBL-dA-lLD"/>
+                                    <constraint firstItem="7l7-l7-P9w" firstAttribute="leading" secondItem="3kg-mt-Z6u" secondAttribute="leading" constant="82" id="h3q-76-hN5"/>
+                                    <constraint firstItem="7l7-l7-P9w" firstAttribute="top" secondItem="3kg-mt-Z6u" secondAttribute="top" constant="112" id="kdM-oK-icn"/>
+                                    <constraint firstItem="7l7-l7-P9w" firstAttribute="top" secondItem="3kg-mt-Z6u" secondAttribute="topMargin" constant="104" id="oXP-kK-HIT"/>
+                                    <constraint firstItem="7l7-l7-P9w" firstAttribute="leading" secondItem="3kg-mt-Z6u" secondAttribute="leading" constant="82" id="vzL-p1-oT7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DeY-Pt-dbh"/>
+                                        <exclude reference="JnS-w3-IWG"/>
+                                        <exclude reference="LBq-8h-15X"/>
+                                        <exclude reference="UAU-08-KZ9"/>
+                                        <exclude reference="VBL-dA-lLD"/>
+                                        <exclude reference="h3q-76-hN5"/>
+                                        <exclude reference="kdM-oK-icn"/>
+                                        <exclude reference="oXP-kK-HIT"/>
+                                        <exclude reference="vzL-p1-oT7"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="68" y="20" width="265" height="253"/>
+                                    <mask key="constraints">
+                                        <include reference="kdM-oK-icn"/>
+                                        <include reference="vzL-p1-oT7"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="DeY-Pt-dbh"/>
+                                        <include reference="JnS-w3-IWG"/>
+                                        <include reference="LBq-8h-15X"/>
+                                        <include reference="UAU-08-KZ9"/>
+                                        <include reference="VBL-dA-lLD"/>
+                                        <include reference="h3q-76-hN5"/>
+                                        <include reference="oXP-kK-HIT"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7WX-QF-fAP" firstAttribute="top" secondItem="3kg-mt-Z6u" secondAttribute="bottom" constant="8" symbolic="YES" id="3DL-Jx-YW0"/>
+                            <constraint firstItem="3kg-mt-Z6u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6hp-nB-uSy"/>
+                            <constraint firstItem="3kg-mt-Z6u" firstAttribute="trailing" secondItem="7WX-QF-fAP" secondAttribute="trailing" id="ESp-PY-P5f"/>
+                            <constraint firstItem="3kg-mt-Z6u" firstAttribute="leading" secondItem="7WX-QF-fAP" secondAttribute="leading" id="R3c-Vf-vLQ"/>
+                            <constraint firstAttribute="bottom" secondItem="7WX-QF-fAP" secondAttribute="bottom" constant="20" symbolic="YES" id="XP0-vb-DQ2"/>
+                            <constraint firstItem="7WX-QF-fAP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="281" id="bCr-x7-vNT"/>
+                            <constraint firstItem="7WX-QF-fAP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lVN-AB-zis"/>
+                            <constraint firstAttribute="trailing" secondItem="7WX-QF-fAP" secondAttribute="trailing" id="rEO-yH-vu7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="console" destination="Ah6-CE-d0a" id="Njj-tS-Crl"/>
+                        <outlet property="send" destination="7l7-l7-P9w" id="8cI-89-baT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
