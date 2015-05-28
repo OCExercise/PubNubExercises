@@ -8,6 +8,12 @@
 
 #import "MessengerChannel.h"
 
+@interface MessengerChannel()
+
+@property (nonatomic, strong) NSString * message;
+
+@end
+
 @implementation MessengerChannel
 
 # pragma mark - Initialization
@@ -36,15 +42,15 @@
 # pragma mark - PNDelegate implementation
 
 - (void)pubnubClient:(PubNub *)client didConnectToOrigin:(NSString *)origin {
-    DLog(@"DELEGATE: Connected to  origin: %@", origin);
+    DLog(@"Connected to  origin: %@", origin);
 }
 
 - (void)pubnubClient:(PubNub *)client didSubscribeOnChannels:(NSArray *)channels {
-    DLog(@"DELEGATE: Subscribed to channel:%@", channels);
+    DLog(@"Subscribed to channel:%@", channels);
 }
 
 - (void)pubnubClient:(PubNub *)client didReceiveMessage:(PNMessage *)message {
-    DLog(@"DELEGATE: Message received.");
+    DLog(@"Message received.");
 }
 
 # pragma mark - Connection
@@ -66,6 +72,14 @@
     
 }
 
+- (NSString *) message {
+    if (!_message) {
+        _message = @"";
+    }
+    
+    return [_message stringByAppendingString:@"\n"];
+}
+
 - (void) connect {
     PNConfiguration * config = [MessengerChannel defaultConfiguration];
     [self connect:config];
@@ -83,13 +97,15 @@
     [[PNObservationCenter defaultCenter] addClientConnectionStateObserver:self withCallbackBlock:^(NSString *origin, BOOL connected, PNError *connectionError){
         if (connected)
         {
-            DLog(@"OBSERVER: Successful Connection!");
+            _message = @"Successful Connection!";
             [PubNub subscribeOn:@[remote_channel]];
         }
         else if (!connected || connectionError)
         {
-            DLog(@"OBSERVER: Error %@, Connection Failed!", connectionError.localizedDescription);
+            _message = [NSString stringWithFormat:@"Error %@, Connection Failed!", connectionError.localizedDescription];
         }
+        
+        DLog(@"%@", _message);
         
         [self.delegate locker:self didConnect:connectionError];
     }];
@@ -97,18 +113,20 @@
     [[PNObservationCenter defaultCenter] addClientChannelSubscriptionStateObserver:self withCallbackBlock:^(PNSubscriptionProcessState state, NSArray *channels, PNError *error){
         switch (state) {
             case PNSubscriptionProcessSubscribedState:
-                DLog(@"OBSERVER: Subscribed to Channel: %@", channels[0]);
+                _message = [NSString stringWithFormat:@"Subscribed to Channel: %@", channels[0]];
                 break;
             case PNSubscriptionProcessNotSubscribedState:
-                DLog(@"OBSERVER: Not subscribed to Channel: %@, Error: %@", channels[0], error);
+                _message = [NSString stringWithFormat:@"Not subscribed to Channel: %@, Error: %@", channels[0], error];
                 break;
             case PNSubscriptionProcessWillRestoreState:
-                DLog(@"OBSERVER: Will re-subscribe to Channel: %@", channels[0]);
+                _message = [NSString stringWithFormat:@"Will re-subscribe to Channel: %@", channels[0]];
                 break;
             case PNSubscriptionProcessRestoredState:
-                DLog(@"OBSERVER: Re-subscribed to Channel: %@", channels[0]);
+                _message = [NSString stringWithFormat:@"Re-subscribed to Channel: %@", channels[0]];
                 break;
         }
+        
+        DLog("%@", _message);
         
         [self.delegate locker:self didConnect:error];
     }];
@@ -116,30 +134,35 @@
     [[PNObservationCenter defaultCenter] addClientChannelUnsubscriptionObserver:self withCallbackBlock:^(NSArray *channel, PNError *error) {
         if ( error == nil )
         {
-            DLog(@"OBSERVER: Unsubscribed from Channel: %@", channel[0]);
+            _message = [NSString stringWithFormat:@"Unsubscribed from Channel: %@", channel[0]];
             [PubNub subscribeOn:@[remote_channel]];
         }
         else
         {
-            DLog(@"OBSERVER: Unsubscribed from Channel: %@, Error: %@", channel[0], error);
+            _message = [NSString stringWithFormat:@"Unsubscribed from Channel: %@, Error: %@", channel[0], error];
         }
+        
+        DLog("%@", _message);
         
         [self.delegate locker:self didConnect:error];
     }];
     
     
     [[PNObservationCenter defaultCenter] addMessageReceiveObserver:self withBlock:^(PNMessage *message) {
-        DLog(@"OBSERVER: Channel: %@, Message: %@", message.channel.name, message.message);
+        
+        _message = [NSString stringWithFormat:@"Channel: %@, Message: %@", message.channel.name, message.message];
+        
         if ( [[[NSString stringWithFormat:@"%@", message.message] substringWithRange:NSMakeRange(1,14)] isEqualToString: @"**************" ])
         {
             [PubNub sendMessage:[NSString stringWithFormat:@"Thank you, GOODBYE!" ] toChannel:remote_channel withCompletionBlock:^(PNMessageState messageState, id data) {
                 if (messageState == PNMessageSent) {
-                    DLog(@"OBSERVER: Sent Goodbye Message!");
+                    _message = [NSString stringWithFormat:@"Sent Goodbye Message!"];
                     [PubNub unsubscribeFrom:@[remote_channel] ];
                 }
             }];
         }
         
+        DLog("%@", _message);
         [self.delegate locker:self didConnect:nil];
     }];
 }

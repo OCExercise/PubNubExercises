@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) id<MessengerChannelDelegate> delegate;
 
+
 + (instancetype) sharedInstance;
 
 
@@ -25,5 +26,6 @@
 - (void) connect;
 - (void) connect:(PNConfiguration *) config;
 
+- (NSString *) message;
 
 @end

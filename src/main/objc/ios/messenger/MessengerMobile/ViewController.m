@@ -28,6 +28,14 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.console scrollRangeToVisible:NSMakeRange([self.console.text length], 0)];
+
+}
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -36,10 +44,11 @@
 - (void) locker:(id)locker didConnect:(NSError *)error {
     if (error) {
         DLog(@"%@", error.localizedDescription);
+        [self logText:error.localizedDescription];
         return;
     }
     
-    DLog(@"Success");
+    [self logText:[locker message]];
     
 }
 
@@ -47,13 +56,28 @@
     
     if (error) {
         DLog(@"%@", error.localizedDescription);
+        [self logText:error.localizedDescription];
         return;
     }
     
-    
-    DLog(@"Success");
+    [self logText:[locker message]];
     
 }
+
+- (void)logText:(NSString *)text
+// Logs the specified text to the text view.
+{
+    // any thread
+    assert(text != nil);
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        // Smart Scrolling
+        [[_console textStorage] appendAttributedString:[[NSAttributedString alloc] initWithString:text]];
+        
+        [_console scrollRangeToVisible:NSMakeRange([_console.text length], 0)];
+        
+    }];
+}
+
 
 
 @end

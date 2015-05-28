@@ -10,7 +10,7 @@
 
 @interface ViewController()
 
-@property (nonatomic, strong) IBOutlet NSTextView * console;
+@property (unsafe_unretained) IBOutlet NSTextView * console;
 
 @end
 
@@ -36,10 +36,11 @@
 - (void) locker:(id)locker didConnect:(NSError *)error {
     if (error) {
         DLog(@"%@", error.localizedDescription);
+        [self logText:error.localizedDescription];
         return;
     }
     
-    DLog(@"Success");
+    [self logText:[locker message]];
     
 }
 
@@ -47,13 +48,31 @@
 
     if (error) {
         DLog(@"%@", error.localizedDescription);
+        [self logText:error.localizedDescription];
         return;
     }
     
-    
-    DLog(@"Success");
+    [self logText:[locker message]];
 
 }
+
+- (void)logText:(NSString *)text
+// Logs the specified text to the text view.
+{
+    // any thread
+    assert(text != nil);
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        // Smart Scrolling
+        BOOL scroll = (NSMaxY(self.console.visibleRect) == NSMaxY(self.console.bounds));
+
+        [[_console textStorage] appendAttributedString:[[NSAttributedString alloc] initWithString:text]];
+        
+        if (scroll) // Scroll to end of the textview contents
+            [self.console scrollRangeToVisible: NSMakeRange(self.console.string.length, 0)];
+
+    }];
+}
+
 
 
 @end
